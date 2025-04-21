@@ -41,7 +41,6 @@ def run_simulation(config):
     tracker.unlock_tokens(config["vesting_duration"])
     return prices, tracker
 
-
 def plot_price_path(prices):
     plt.plot(prices)
     plt.title("Token Sale Price Curve")
@@ -49,18 +48,6 @@ def plot_price_path(prices):
     plt.ylabel("Price (SOL)")
     plt.grid(True)
     plt.show()
-
-
-# if __name__ == "__main__":
-#     print("🚀 Starting simulation...")
-#     config = default_config()
-#     prices, tracker = run_simulation(config)
-#     print("✅ Simulation finished.")
-#     plot_price_path(prices)
-#     print("📊 Protocol Revenue:", tracker.platform_fee)
-#     print("📊 LP Revenue:", tracker.lp_fee)
-#     print("📊 Locked Revenue:", tracker.locked_tokens)
-
 
 def run_experiments():
     configs = [
